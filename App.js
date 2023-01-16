@@ -4,6 +4,9 @@ import { useState } from "react";
 import { View, StatusBar } from "react-native";
 import { setCustomText } from "react-native-global-props";
 
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+
 const fetchFonts = () => {
   return Font.loadAsync({
     OpenSans: require("./assets/fonts/OpenSans-Regular.ttf"),
@@ -28,12 +31,14 @@ export default function App() {
 
   return (
     <>
-      <StatusBar
-        translucent
-        backgroundColor="transparent"
-        barStyle={"light-content"}
-      />
-      <MainNavigator />
+      <Provider store={store}>
+        <StatusBar
+          translucent
+          backgroundColor="transparent"
+          barStyle={"light-content"}
+        />
+        <MainNavigator />
+      </Provider>
     </>
   );
 }
