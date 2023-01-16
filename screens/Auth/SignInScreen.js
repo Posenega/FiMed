@@ -1,44 +1,27 @@
 import { StyleSheet, Text, View } from "react-native";
-import Globals from "../../public/Globals";
 import React from "react";
+import MainView from "../../components/utils/MainView";
+import Globals from "../../public/Globals";
 
-const SignInScreen = () => {
+export default function SignInScreen() {
   return (
-    <View style={styles.background}>
-      <View style={styles.mainText}>
-        <Text style={styles.text}>SignInScreen</Text>
-      </View>
-      <View style={styles.ctaButton}>
-        {/* <Text style={styles.text}>Hello</Text> */}
-      </View>
-    </View>
+    <MainView>
+      <View style={styles.backButton}></View>
+    </MainView>
   );
-};
-
-export default SignInScreen;
+}
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    backgroundColor: Globals.COLOR.PRIMARY,
-    paddingHorizontal: Globals.PADDING.HORIZONTAL,
-  },
-  mainText: {
-    flex: 1,
-    width: "100%",
-    backgroundColor: "red",
+  backButton: {
+    transform: [{ rotate: "180deg" }],
     justifyContent: "center",
     alignItems: "center",
-  },
-
-  text: {
-    fontSize: "50px",
-    color: "#fff",
-    fontFamily: Globals.FAMILLY.BOLD,
-  },
-  ctaButton: {
-    flex: 1,
-    width: "100%",
-    backgroundColor: "green",
+    position: "absolute",
+    width: 40,
+    height: 40,
+    backgroundColor: Globals.COLOR.SECONDARY,
+    borderRadius: 8,
+    top: 0,
+    left: 30,
   },
 });
