@@ -15,5 +15,6 @@ export default {
     EXTRABOLD: "OpenSans-ExtraBold",
     MEDIUM: "OpenSans-Medium",
     LIGHTITALIC: "OpenSans-LightItalic",
+    SEMIBOLD: "OpenSans-SemiBold",
   },
 };

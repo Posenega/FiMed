@@ -11,10 +11,10 @@ const fetchFonts = () => {
   return Font.loadAsync({
     OpenSans: require("./assets/fonts/OpenSans-Regular.ttf"),
     "OpenSans-LightItalic": require("./assets/fonts/OpenSans-LightItalic.ttf"),
-
     "OpenSans-Bold": require("./assets/fonts/OpenSans-Bold.ttf"),
     "OpenSans-Medium": require("./assets/fonts/OpenSans-Medium.ttf"),
     "OpenSans-ExtraBold": require("./assets/fonts/OpenSans-ExtraBold.ttf"),
+    "OpenSans-SemiBold": require("./assets/fonts/OpenSans-SemiBold.ttf"),
   });
 };
 

@@ -1,11 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-import CustomInput from "../CustomInput";
-import DropDownMenu from "../animation/DropDownMenu";
+import DropDownMenu from "../../animation/DropDownMenu";
 import { Controller } from "react-hook-form";
 
-import Cities from "../../public/Cities";
+import Cities from "../../../public/Cities";
 
 export default function StepThree({ control }) {
   return (

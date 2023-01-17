@@ -1,9 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import CustomInput from "../CustomInput";
-import AuthButton from "../customs/Auth/AuthButton";
-import Globals from "../../public/Globals";
-import Arrow from "../../icons/Arrow";
+import CustomInput from "../../CustomInput";
 
 export default function StepOne() {
   return (

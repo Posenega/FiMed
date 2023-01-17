@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import CustomInput from '../CustomInput'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import CustomInput from "../CustomInput";
 
 export default function SignIn() {
   return (
@@ -12,7 +12,7 @@ export default function SignIn() {
 
       <View style={{ height: 40 }} />
     </View>
-  )
+  );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

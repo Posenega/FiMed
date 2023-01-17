@@ -1,6 +1,5 @@
 import {
   StyleSheet,
-  Text,
   TextInput,
   TouchableWithoutFeedback,
   View,
@@ -12,18 +11,19 @@ import ShowValueInput from "../icons/ShowValueInput";
 export default function CustomInput(props) {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <View style={styles.inputConatiner}>
+    <View style={{ ...styles.inputConatiner, ...props.style }}>
       <TextInput
         {...props}
         selectionColor={Globals.COLOR.PRIMARYSWATCH}
         style={
-          !props.isPassword
-            ? styles.input
-            : { ...styles.input, ...styles.passwordInput }
+          props.isPassword
+            ? { ...styles.input, ...styles.passwordInput, ...props.style }
+            : { ...styles.input, ...props.style }
         }
         placeholderTextColor="rgba(255,255,255,0.15)"
         autoComplete={false}
         autoCorrect={false}
+        secureTextEntry={props.isPassword ? !isVisible : isVisible}
       />
       {props.isPassword ? (
         <TouchableWithoutFeedback onPress={() => setIsVisible(!isVisible)}>
